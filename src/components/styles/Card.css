@@ -1,0 +1,7 @@
+.calculatorFrame {
+    background-color: blue;
+    width: 750px;
+    height: 500px;
+    margin-left: 100px;
+    border: 2px solid gray;
+}
