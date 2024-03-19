@@ -1,0 +1,14 @@
+.listOperator {
+    display: flex;
+    justify-content: space-around;
+}
+.listOperator-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+    font-size: 40px;
+}

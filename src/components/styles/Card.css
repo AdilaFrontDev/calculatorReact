@@ -1,7 +1,38 @@
-.calculatorFrame {
-    background-color: blue;
+.calculator-frame {
+    background-color: rgb(231, 227, 222);
     width: 750px;
-    height: 500px;
-    margin-left: 100px;
+    height: 650px;
     border: 2px solid gray;
+    margin: 0 50px 0 50px;
+    border-radius: 10px;
+}
+
+.calculator-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+}
+
+.calculator-input-operator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+    font-size: 40px;
+}
+
+.calculator-output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.calculator-output-result {
+    font-size: 40px;
+
 }
