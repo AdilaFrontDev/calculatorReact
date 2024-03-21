@@ -1,7 +1,4 @@
-.listOperator {
-    display: flex;
-    justify-content: space-around;
-}
+
 .listOperator-btn {
     display: flex;
     align-items: center;

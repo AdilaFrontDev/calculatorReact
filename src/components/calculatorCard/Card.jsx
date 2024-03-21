@@ -1,24 +1,59 @@
 import { useState } from 'react'
 import OperationBtnOperators from '../calclatorOperationBtn/OperationBtnOperators'
-import OperationInputs from '../calculatorInput/OperationInputs'
+import OperationInput from '../calculatorInput/OperationInput'
 import OperationBtnEqual from '../calclatorOperationBtn/OperationBtnEqual'
+import OperationOutput from '../calculatorOutput/OperationOutput'
 import '../styles/Card.css'
 
+
+
 function Card() {
-    const [operator, updateOperator] = useState('')
-   
+    const [operatorChoice, updateOperatorChoice] = useState('')
+    const [operationLaunch, updateOperationLaunch] = useState(false)
+    const [firtsPart, setFirstPart] = useState(0)
+    const [secondPart, setSecondPart] = useState(0)
+    const operatorList = ['+', '-', 'x', '/']
+
     return (
         <div className='calculator-frame'>
-            <div > 
-                <OperationBtnOperators />
+            <div className='listOperator'> 
+
+            {operatorList.map((operator) => (
+                <OperationBtnOperators
+                    key={operator}
+                    operator={operator}
+                    operatorChoice={operatorChoice}
+                    updateOperatorChoice={updateOperatorChoice}
+                ></OperationBtnOperators> 
+            ))}
+            
+
             </div>
             <div className='calculator-input'>
-                <p className='calculator-input-operator'>0</p>
-                <OperationInputs />
+                <p className='calculator-input-operator'>{operatorChoice}</p>
+                <div className='calculator-input-membre'>
+                   <OperationInput
+                      key="part1"
+                      setFirstPart={setFirstPart}  
+                   />
+                   <OperationInput
+                       key="part2"
+                       setSecondPart={setSecondPart}
+                   />
+                    
+                </div>
+                
             </div>
             <div className='calculator-output'>
-                <p className="calculator-output-result">0</p>
-                <OperationBtnEqual />
+                <OperationOutput 
+                operationLaunch={operationLaunch}
+                operatorChoice={operatorChoice}
+                firtsPart={firtsPart}
+                secondPart={secondPart}
+                />
+                <OperationBtnEqual 
+                    updateOperationLaunch={updateOperationLaunch}
+                />
             </div>
         </div>
     )

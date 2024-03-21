@@ -1,10 +1,12 @@
 import "../styles/OperatorBtnEqual.css"
 
-function OperatorBtnEqual() {
-    const operatorEqual = "="
+
+
+
+function OperatorBtnEqual({updateOperationLaunch}) {
 
     return (
-        <p className="operatorEqual">{operatorEqual}</p>
+        <p className="operatorEqual" onClick={() => (updateOperationLaunch(true))}>=</p>
     )
 }
 

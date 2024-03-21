@@ -25,6 +25,12 @@
     font-size: 40px;
 }
 
+.calculator-input-membre {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 .calculator-output {
     display: flex;
     flex-direction: column;
@@ -35,4 +41,9 @@
 .calculator-output-result {
     font-size: 40px;
 
+}
+
+.listOperator {
+    display: flex;
+    justify-content: space-around;
 }

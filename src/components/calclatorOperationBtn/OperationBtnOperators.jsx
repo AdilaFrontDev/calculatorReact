@@ -1,14 +1,9 @@
 import '../styles/OperationBtnOperators.css'
 
-function OperationBtnOperators() {
-    const operatorList = ['+', '-', 'x', '/']
+function OperationBtnOperators({operatorChoice, updateOperatorChoice, operator}) {
 
-    return (
-        <div className='listOperator' >
-            {operatorList.map((operator) => (
-                    <p className='listOperator-btn' key={operator}>{operator}</p>
-            ))}
-        </div>
+    return (            
+            <p className='listOperator-btn' operator={operatorChoice} onClick={() => (updateOperatorChoice(operator))}>{operator}</p>
     )
 }
 
