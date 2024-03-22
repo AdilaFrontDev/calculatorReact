@@ -13,6 +13,7 @@ function Card() {
     const [firtsPart, setFirstPart] = useState(0)
     const [secondPart, setSecondPart] = useState(0)
     const operatorList = ['+', '-', 'x', '/']
+    const operationPart = ["partOne", "partTow"]
 
     return (
         <div className='calculator-frame'>
@@ -27,20 +28,17 @@ function Card() {
                 ></OperationBtnOperators> 
             ))}
             
-
             </div>
             <div className='calculator-input'>
                 <p className='calculator-input-operator'>{operatorChoice}</p>
                 <div className='calculator-input-membre'>
-                   <OperationInput
-                      key="part1"
-                      setFirstPart={setFirstPart}  
-                   />
-                   <OperationInput
-                       key="part2"
-                       setSecondPart={setSecondPart}
-                   />
                     
+                    <OperationInput
+                        setFirstPart={setFirstPart}
+                        setSecondPart={setSecondPart}  
+                    />
+              
+    
                 </div>
                 
             </div>

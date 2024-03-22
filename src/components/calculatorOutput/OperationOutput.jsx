@@ -2,32 +2,39 @@
 
 function OperationOutput({firtsPart, secondPart, operatorChoice, operationLaunch}) {
     
-    function OperationMaker(firtsPart, secondPart, operator) {
-        const numberFistPart = Number(firtsPart)
-        const numberSecondPart = Number(secondPart)
-        const result = 0
-        if (isNaN(numberFistPart) && isNaN(numberSecondPart) && operationLaunch ) {
+    function OperationMaker(firtsPart, secondPart, operatorChoice) {
+        let result = 0
+        const partUn = Number(firtsPart)
+        const partDeux = Number(secondPart)
+        console.log(partUn)
+        console.log(partDeux)
+        console.log(typeof partUn)
+        console.log(typeof partDeux)
+        if (operationLaunch) {
             switch(operatorChoice) {
                 case '+':
-                    result = numberFistPart + numberSecondPart;
+                    result = partUn + partDeux;
                     break;
                 case '-':
-                    result =umberFistPart - numberSecondPart;
+                    result = partUn - partDeux;
                     break;
                 case 'x':
-                    result = umberFistPart * numberSecondPart;
+                    result = partUn * partDeux;
                     break;
                 case '/':
-                    result =umberFistPart / numberSecondPart;
+                    result = partUn / partDeux;
                     break;
                 default:
-                    console.log(`l'opérateur choisi n'est pas adapté`)
+                    console.log(`Il faut choisir un opérateur`)
             }
         } else {
             console.log(`Au moin l'un des parties de l'opération n'est pas un nombre`)
         }
         return result
     }
+
+    
+   
 
     return (
         <p className="calculator-output-result">{OperationMaker(firtsPart, secondPart, operatorChoice)}</p>
